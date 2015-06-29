@@ -1,10 +1,10 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://localhost/startapp-test',
+	db: 'mongodb://localhost/school-administrative-services-test',
 	port: 3001,
 	app: {
-		title: 'StartApp - Test Environment'
+		title: 'School Administrative Services - Test Environment'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || 'APP_ID',

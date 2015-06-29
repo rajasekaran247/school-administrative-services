@@ -2,8 +2,8 @@
 
 module.exports = {
 	app: {
-		title: 'School - Admissions',
-		description: 'Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js',
+		title: 'School - Administrative-Services',
+		description: 'Full-Stack JavaScript web-application for school administrative services with MongoDB, Express, AngularJS (bootstrap), and Node.js',
 		keywords: 'MongoDB, Express, AngularJS, Node.js'
 	},
 	port: process.env.PORT || 3000,

@@ -1,9 +1,9 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://localhost/school-admissions-dev',
+	db: 'mongodb://localhost/school-administrative-services-dev',
 	app: {
-		title: 'School - Admissions - Development Environment'
+		title: 'School - Administrative-Services - Development Environment'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || 'APP_ID',

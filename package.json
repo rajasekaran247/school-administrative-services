@@ -1,8 +1,8 @@
 {
-	"name": "startapp",
-	"description": "Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js",
+	"name": "school-administrative-services",
+	"description": "Full-Stack JavaScript web-application for school administrative services with MongoDB, Express, AngularJS (bootstrap), and Node.js",
 	"version": "0.0.1",
-	"author": "Damian Dudziak",
+	"author": "rajasekaran@247lifetime.com",
 	"engines": {
 		"node": "0.10.x",
 		"npm": "1.4.x"
