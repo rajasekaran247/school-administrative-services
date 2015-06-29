@@ -1,0 +1,19 @@
+<section data-ng-controller="FeesController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Fees</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="fee in fees" data-ng-href="#!/fees/{{fee._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="fee.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="fee.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="fee.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!fees.$resolved || fees.length">
+    	No Fees yet, why don't you <a href="/#!/fees/create">create one</a>?
+    </div>
+</section>
