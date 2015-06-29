@@ -1,0 +1,19 @@
+<section data-ng-controller="AdmissionEligibilityRulesController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Admission eligibility rules</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="admissionEligibilityRule in admissionEligibilityRules" data-ng-href="#!/admission-eligibility-rules/{{admissionEligibilityRule._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="admissionEligibilityRule.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="admissionEligibilityRule.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="admissionEligibilityRule.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!admissionEligibilityRules.$resolved || admissionEligibilityRules.length">
+    	No Admission eligibility rules yet, why don't you <a href="/#!/admission-eligibility-rules/create">create one</a>?
+    </div>
+</section>

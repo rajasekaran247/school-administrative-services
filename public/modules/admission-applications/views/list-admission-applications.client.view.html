@@ -1,0 +1,19 @@
+<section data-ng-controller="AdmissionApplicationsController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Admission applications</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="admissionApplication in admissionApplications" data-ng-href="#!/admission-applications/{{admissionApplication._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="admissionApplication.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="admissionApplication.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="admissionApplication.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!admissionApplications.$resolved || admissionApplications.length">
+    	No Admission applications yet, why don't you <a href="/#!/admission-applications/create">create one</a>?
+    </div>
+</section>
