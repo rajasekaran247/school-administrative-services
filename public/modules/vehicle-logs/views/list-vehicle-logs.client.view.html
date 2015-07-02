@@ -1,0 +1,19 @@
+<section data-ng-controller="VehicleLogsController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Vehicle logs</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="vehicleLog in vehicleLogs" data-ng-href="#!/vehicle-logs/{{vehicleLog._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="vehicleLog.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="vehicleLog.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="vehicleLog.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!vehicleLogs.$resolved || vehicleLogs.length">
+    	No Vehicle logs yet, why don't you <a href="/#!/vehicle-logs/create">create one</a>?
+    </div>
+</section>

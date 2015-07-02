@@ -1,0 +1,19 @@
+<section data-ng-controller="CalendarEventsController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Calendar events</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="calendarEvent in calendarEvents" data-ng-href="#!/calendar-events/{{calendarEvent._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="calendarEvent.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="calendarEvent.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="calendarEvent.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!calendarEvents.$resolved || calendarEvents.length">
+    	No Calendar events yet, why don't you <a href="/#!/calendar-events/create">create one</a>?
+    </div>
+</section>

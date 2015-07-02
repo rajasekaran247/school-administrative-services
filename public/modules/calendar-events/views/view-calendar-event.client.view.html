@@ -1,0 +1,21 @@
+<section data-ng-controller="CalendarEventsController" data-ng-init="findOne()">
+	<div class="page-header">
+		<h1 data-ng-bind="calendarEvent.name"></h1>
+	</div>
+	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == calendarEvent.user._id))">
+		<a class="btn btn-primary" href="/#!/calendar-events/{{calendarEvent._id}}/edit">
+			<i class="glyphicon glyphicon-edit"></i>
+		</a>
+		<a class="btn btn-primary" data-ng-click="remove();">
+			<i class="glyphicon glyphicon-trash"></i>
+		</a>
+	</div>
+	<small>
+		<em class="text-muted">
+			Posted on
+			<span data-ng-bind="calendarEvent.created | date:'mediumDate'"></span>
+			by
+			<span data-ng-bind="calendarEvent.user.displayName"></span>
+		</em>
+	</small>
+</section>
