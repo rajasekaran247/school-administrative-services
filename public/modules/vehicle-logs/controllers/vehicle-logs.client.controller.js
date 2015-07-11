@@ -9,7 +9,8 @@ angular.module('vehicle-logs').controller('VehicleLogsController', ['$scope', '$
 		$scope.create = function() {
 			// Create new Vehicle log object
 			var vehicleLog = new VehicleLogs ({
-				name: this.name
+				weekStartingDate: this.weekStartingDate,
+        vehicleNo: this.vehicleNo
 			});
 
 			// Redirect after save

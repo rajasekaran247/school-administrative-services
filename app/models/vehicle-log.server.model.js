@@ -10,12 +10,27 @@ var mongoose = require('mongoose'),
  * Vehicle log Schema
  */
 var VehicleLogSchema = new Schema({
-	name: {
+	weekStartingDate: {
+		type: Date,
+		default: Date.now
+	},
+  vehicleNo: {
 		type: String,
 		default: '',
-		required: 'Please fill Vehicle log name',
 		trim: true
 	},
+  tripDetails: {
+    tripDate: {type: Date}, 
+    startingKmReading: {type: Number}, 
+    endingKmReading: {type: Number}, 
+    driverName: {type: String}
+  },
+  fuelDetails: {
+    fuelBillDate: {type: Date}, 
+    billNo: {type: Number}, 
+    ltrs: {type: Number},
+    amount: {type: Number}
+  }, 
 	created: {
 		type: Date,
 		default: Date.now

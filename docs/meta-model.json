@@ -1,0 +1,11 @@
+{
+  "name": "schooladinistrativeservices", "models": [
+    { "name": "model 1", "elements": [
+      {"elementname": "e1", "elementtype": "string", "elementlabel": "E 1"},
+      {"elementname": "e2", "elementtype": "number", "elementlabel": "E 2"},
+      {"elementname": "e3", "elementtype": "date", "elementlabel": "E 3"}
+      ]},
+    {"name": "model 2", "elements": []},
+    {"name": "model 3", "elements": []},
+    {"name": "model 4", "elements": []}]
+}
