@@ -1,0 +1,1 @@
+{"name":"schooladmin","models":[{"name":"Model1","elements":[{"elementname":"col1","elementtype":"String","width":"2","elementlabel":"Column 1","exampletext":"C1"},{"elementname":"col2","elementtype":"Date","width":"2","elementlabel":"Column 2"}]}]}
